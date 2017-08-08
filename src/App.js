@@ -1,7 +1,14 @@
 import React, {Component} from 'react'
+import beziersquare from './bezier-square.svg'
+import instagramlogo from './instagram-logo.svg'
+import astronaut from './astronaut.jpg'
+import wahndur1 from './wahndur-1.jpg'
+import wahndur2 from './wahndur-2.png'
+import magiceye from './magic-eye.jpg'
+import octo from './octo.png'
 
 
-class ReactBezierSquare extends Component {
+class PsychadelicHueRotate extends Component {
 
   constructor(props) {
 
@@ -10,12 +17,12 @@ class ReactBezierSquare extends Component {
     this.state = {
       degree: 0,
       images: [
-        'instagram-logo.svg',
-        'astronaut.jpg',
-        'wahndur-1.jpg',
-        'wahndur-2.png',
-        'magic-eye.jpg',
-        'octo.png',
+        instagramlogo,
+        astronaut,
+        wahndur1,
+        wahndur2,
+        magiceye,
+        octo,
       ],
       imageIdx: 0,
     }
@@ -35,7 +42,7 @@ class ReactBezierSquare extends Component {
             onMouseLeave={this.handleMouseUp}
             onMouseMove={this.handleMouseUp}
             onMouseOut={this.handleMouseUp}
-            src={`/${this.state.images[this.state.imageIdx]}`}
+            src={this.state.images[this.state.imageIdx]}
             style={this.style2(this.props, this.state)}/>
         </div>
         <button onClick={this.selectRandomImage}>Next image</button>
@@ -71,8 +78,8 @@ class ReactBezierSquare extends Component {
       {
         display: 'inline-flex',
         overflow: 'hidden',
-        WebkitMask: 'url(/bezier-square.svg) 0% 0% / contain no-repeat',
-        mask: 'url(/bezier-square.svg) 0% 0% / contain no-repeat',
+        WebkitMask: `url(${beziersquare}) 0% 0% / contain no-repeat`,
+        mask: `url(${beziersquare}) 0% 0% / contain no-repeat`,
       },
       props.style
     )
@@ -88,4 +95,4 @@ class ReactBezierSquare extends Component {
   }
 }
 
-export default ReactBezierSquare
+export default PsychadelicHueRotate
