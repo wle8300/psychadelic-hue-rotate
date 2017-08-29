@@ -35,7 +35,8 @@ class PsychadelicHueRotate extends Component {
   render() {
     return (
       <div style={this.style0()}>
-        <h3>Press-and-Hold images to GETT TT R I P P E D O U TTTTT</h3>
+        <h3 style={{margin: 0}}>Press-and-Hold images and</h3>
+        <h3 style={{margin: 0}}>GETT TT R I P P E D O U TTTTT</h3>
         <div style={{display: 'flex', justifyContent: 'space-around', padding: '1rem 0', width: '100%'}}>
           <button onClick={this.selectRandomImage} style={{padding: '1rem 0'}}>Next image</button>
           <div>{this.state.imageIdx + 1+ ' / ' +this.state.images.length}</div>
